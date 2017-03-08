@@ -1,10 +1,13 @@
-package com.sogeti.rental.ui;
+package com.sogeti.rental.ui.views;
 
 import java.util.Collection;
 
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.LabelProvider;
+import org.eclipse.ui.internal.AggregateWorkingSet;
 
+import com.opcoach.training.rental.Customer;
+import com.opcoach.training.rental.RentalAgency;
 import com.sogeti.rental.core.RentalCoreActivator;
 
 public class RentalProvider extends LabelProvider implements ITreeContentProvider {
@@ -19,7 +22,10 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 
 	@Override
 	public Object[] getChildren(Object parentElement) {
-		// TODO Auto-generated method stub
+
+		if(parentElement instanceof RentalAgency){
+			return ((RentalAgency) parentElement).getCustomers().toArray();
+		}
 		return null;
 	}
 
@@ -32,7 +38,17 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 	@Override
 	public boolean hasChildren(Object element) {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
+	}
+	
+	@Override
+	public String getText(Object element) {
+		if(element instanceof RentalAgency){
+			return ((RentalAgency) element).getName();
+		}else if(element instanceof Customer){
+			return ((Customer) element).getDisplayName();
+		}
+		return super.getText(element);
 	}
 
 }
