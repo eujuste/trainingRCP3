@@ -16,13 +16,24 @@
             id="com.sogeti.rental.ui.views.SampleView">
       </view>
       <view
-            category="com.sogeti.rental.ui"
+            category="com.sogeti.rental.ui.category1"
             class="com.sogeti.rental.ui.views.RentalPropertyView"
             icon="Rentals.png"
             id="com.sogeti.rental.ui.rentaView"
             name="Rental Property view"
             restorable="true">
       </view>
+      <view
+            category="com.sogeti.rental.ui.category1"
+            class="com.sogeti.rental.ui.RentalTreeView"
+            id="com.sogeti.rental.ui.views.RentalTreeView"
+            name="Rental Tree View"
+            restorable="true">">
+      </view>
+      <category
+            id="com.sogeti.rental.ui.category1"
+            name="Rental">
+      </category>
    </extension>
    <extension
          point="org.eclipse.ui.perspectiveExtensions">
