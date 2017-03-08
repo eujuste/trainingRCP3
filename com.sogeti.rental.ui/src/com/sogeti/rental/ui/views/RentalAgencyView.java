@@ -26,6 +26,7 @@ public class RentalAgencyView extends ViewPart {
 		Collection<RentalAgency> agencies = new ArrayList<RentalAgency>();
 		agencies.add(RentalCoreActivator.getAgency());
 		tv.setInput(agencies);
+		tv.expandAll();
 	}
 
 	@Override
