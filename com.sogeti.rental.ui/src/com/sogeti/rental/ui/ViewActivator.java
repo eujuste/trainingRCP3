@@ -1,5 +1,7 @@
 package com.sogeti.rental.ui;
 
+import java.net.URI;
+
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
@@ -71,5 +73,8 @@ public class ViewActivator extends AbstractUIPlugin implements RentalUIConstants
 		reg.put(IMG_RENTAL, ImageDescriptor.createFromURL(b.getEntry(IMG_RENTAL)));
 		reg.put(IMG_OBJECT, ImageDescriptor.createFromURL(b.getEntry(IMG_OBJECT)));
 		reg.put(IMG_AGENCY, ImageDescriptor.createFromURL(b.getEntry(IMG_AGENCY)));
+		reg.put(IMG_AGENCY, ImageDescriptor.createFromURL(b.getEntry(IMG_AGENCY)));
+		reg.put(IMG_NODE, ImageDescriptor.createFromURL(b.getEntry(IMG_NODE)));
+		
 	}
 }

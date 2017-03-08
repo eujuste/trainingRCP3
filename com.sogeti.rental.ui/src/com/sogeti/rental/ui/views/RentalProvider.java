@@ -111,7 +111,7 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 		}else if(element instanceof RentalObject){
 			return ViewActivator.getDefault().getImageRegistry().get(IMG_OBJECT);
 		}else if(element instanceof Node){
-			return ViewActivator.getDefault().getImageRegistry().get(IMG_OBJECT);
+			return ViewActivator.getDefault().getImageRegistry().get(IMG_NODE);
 		}
 		return super.getImage(element);
 	}
