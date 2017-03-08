@@ -18,7 +18,7 @@
       <view
             category="com.sogeti.rental.ui.Rental"
             class="com.sogeti.rental.ui.views.RentalPropertyView"
-            icon="Rentals.png"
+            icon="icons/Rentals.png"
             id="com.sogeti.rental.ui.rentaView"
             name="Rental Property view"
             restorable="true">
